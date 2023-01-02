@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+}
+body.dark p{
+    color: white;
+}
+body.dark{
+    background-color:#292c35;
+}
+.container{
+    width: 51px;
+    height: 22px;
+    border-radius: 13%;
+    padding-top: 3px;
+    background-color: #22cfe5;
+}
+.checkbox{
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+
+  
+    
+}
+.checkbox:checked + .label .ball{
+    z-index: 1;
+    transform: translateX(16px);    
+}
+
+.label{
+    z-index: 1;
+    /* background-color: rgb(200, 123, 123); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 20px;
+    height: 12px;
+    width: 20px;
+    position: relative;
+    transform: scale(1.5);
+    /* background-color: red; */
+}
+.ball{
+    cursor: pointer;
+    z-index: 1;
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    top: 1px;
+    left: 6px;
+    border-radius: 50%;
+    background-color:green;
+    transition: transform 0.2s linear;
+}
+.fa-eye{
+    z-index: 1;
+    color: #f1c40f;
+    font-size: 10px;
+    margin: 0 1px;
+}
+.fa-arrow-trend-up{
+    z-index: 1;
+    font-size: 9px;
+    color: #f39c12;
+    margin: 0 4px;
+}
